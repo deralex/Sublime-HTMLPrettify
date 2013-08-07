@@ -44,7 +44,10 @@ following the instructions at:\n"""
 
     # Simply using `node` without specifying a path sometimes doesn't work :(
     settings = sublime.load_settings(SETTINGS_FILE)
-    node = "node" if exists_in_path("node") else settings.get("node_path")
+#    node = "node" if exists_in_path("node") else settings.get("node_path")
+
+    # Patch for mstrenger
+    node = "node"
 
     output = ""
     try:
